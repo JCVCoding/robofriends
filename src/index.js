@@ -10,6 +10,8 @@ import 'tachyons';
 import App from './containers/App';
 import { searchRobots, requestRobots } from './reducers';
 
+import * as serviceWorker from './serviceWorkerRegistration';
+
 const logger = createLogger();
 const rootReducer = combineReducers({ searchRobots, requestRobots });
 const store = legacy_createStore(rootReducer, applyMiddleware(thunk, logger));
@@ -22,6 +24,8 @@ root.render(
     </Provider>
   </React.StrictMode>
 );
+
+serviceWorker.register();
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
