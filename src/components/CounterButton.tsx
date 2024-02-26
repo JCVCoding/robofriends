@@ -1,14 +1,24 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 
-class CounterButton extends Component {
-  constructor(props) {
+type CounterButtonProps = {
+  color: string;
+};
+type CounterButtonState = {
+  count: number;
+};
+
+class CounterButton extends Component<CounterButtonProps, CounterButtonState> {
+  constructor(props: CounterButtonProps) {
     super(props);
     this.state = {
       count: 0,
     };
   }
 
-  shouldComponentUpdate(nextProps, nextState) {
+  shouldComponentUpdate(
+    nextProps: CounterButtonProps,
+    nextState: CounterButtonState
+  ) {
     if (this.state.count !== nextState.count) {
       return true;
     }

@@ -1,6 +1,10 @@
-import React from 'react';
+import { StoreData } from './MainPage';
 
-const SearchBox = ({ searchChange }) => {
+const SearchBox = ({
+  searchChange,
+}: {
+  searchChange: StoreData['onSearchChange'];
+}) => {
   return (
     <div className='pa2'>
       <input

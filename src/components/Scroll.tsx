@@ -1,6 +1,6 @@
-import React from 'react';
+import { ReactElement } from 'react';
 
-const Scroll = ({ children }) => {
+const Scroll = ({ children }: { children: ReactElement }) => {
   return (
     <div
       style={{
