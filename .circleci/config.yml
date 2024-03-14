@@ -15,9 +15,9 @@ jobs:
       - image: cimg/base:2022.05
     steps:
       - checkout
-      -run: echo "running tests"
-      -run: npm install
-      -run: npm test
+      - run: echo "running tests"
+      - run: npm install
+      - run: npm test
   exampleTest:
     docker:
       - image: cimg/base:2022.05
