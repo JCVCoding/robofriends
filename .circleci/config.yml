@@ -30,6 +30,6 @@ workflows:
     jobs:
       - build
       - exampleTest
-      - test
+      - test:
           requires:
             - exampleTest
